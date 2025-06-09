@@ -1502,6 +1502,12 @@ path {
     background-color: var(--color-black-400);
 }
 
+@media (width <= 370px) {
+    .order__items--subitems .order__item::before {
+        left: -9px;
+    }
+}
+
 .order__item-details {
     width: 100%;
 }
