@@ -2054,7 +2054,7 @@ function loadConnectedUsers(tableData) {
             if (response.status !== "ok") throw new Error(response.message);
 
             const modal = document.querySelector(
-                `.modal[data-table-id="${tableData.id}"]`
+                `.modal[data-element='see-table-users-connected'][data-table-id="${tableData.id}"]`
             );
             const modalResults = modal.querySelector(".modal__results");
             const connectedUsersList = modal.querySelector(
