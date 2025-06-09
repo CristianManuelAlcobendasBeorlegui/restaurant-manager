@@ -227,8 +227,6 @@ function init() {
     loader = document.querySelector(".loader");
     loaderTitle = loader.querySelector(".loader__title");
 
-    openLoader("Retreiving data");
-
     // Set text content
     userId.textContent = userData.user_id;
     userAlias.textContent = userData.name;
@@ -838,6 +836,7 @@ function init() {
     refreshPreviousOrdersButton.addEventListener("click", loadPreviousOrders);
 
     // Execute methods
+    openLoader("Retreiving items");
     loadData();
     checkAdminFunctions();
     setInterval(() => {
@@ -870,8 +869,6 @@ function init() {
         loadCurrentOrder(true);
         loadPreviousOrders(true);
     });
-
-    closeLoader();
 }
 
 function showSection(id) {
@@ -1453,6 +1450,8 @@ function loadMenu() {
                 applyMenuItemFilters();
             });
         });
+
+    closeLoader();
 }
 
 function capitalize(string) {
