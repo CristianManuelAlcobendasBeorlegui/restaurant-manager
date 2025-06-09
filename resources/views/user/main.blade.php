@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="{{ asset('css/tabler-icons/webfont/tabler-icons.min.css') }}"
     />
-
+    <link rel="icon" type="image/svg+xml" href="{{ asset('img/restaurant-manager-favicon.svg') }}">
     <script src="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.21.2/dist/sweetalert2.all.min.js
 "></script>
