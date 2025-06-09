@@ -2274,6 +2274,7 @@ function loadPreviousOrders(runInBackground = false) {
                 const orderIdItem = document.createElement("div");
                 const orderIdName = document.createElement("strong");
                 const orderIdValue = document.createElement("span");
+                const orderInfoIcon = document.createElement("i");
                 const addedAtItem = document.createElement("div");
                 const addedAtName = document.createElement("strong");
                 const addedAtValue = document.createElement("span");
@@ -2292,6 +2293,7 @@ function loadPreviousOrders(runInBackground = false) {
                 );
                 orderIdName.setAttribute("class", "order__data-name");
                 orderIdValue.setAttribute("class", "order__data-value");
+                orderInfoIcon.setAttribute("class", "order-info-button ti ti-info-circle");
                 addedAtItem.setAttribute("class", "order__data-item");
                 addedAtName.setAttribute("class", "order__data-name");
                 addedAtValue.setAttribute("class", "order__data-value");
@@ -2302,7 +2304,7 @@ function loadPreviousOrders(runInBackground = false) {
                     getStatusLabel(order.status)
                 );
                 orderIdName.textContent = "Order";
-                orderIdValue.textContent = order.id;
+                orderIdValue.textContent = order.id + " ";
                 addedAtName.textContent = "Updated at";
                 addedAtValue.textContent = order.updated_at;
 
@@ -2319,6 +2321,9 @@ function loadPreviousOrders(runInBackground = false) {
 
                 orderIdItem.appendChild(orderIdName);
                 orderIdItem.appendChild(orderIdValue);
+                if (order.observations) {
+                  orderIdItem.appendChild(orderInfoIcon);
+                }
 
                 addedAtItem.appendChild(addedAtName);
                 addedAtItem.appendChild(addedAtValue);
@@ -2467,6 +2472,69 @@ function loadPreviousOrders(runInBackground = false) {
                         itemElement.appendChild(name);
                         itemElement.appendChild(itemStatus);
                     }
+                });
+
+                // Add event listener
+                orderIdItem.addEventListener("click", () => {
+                  // Define elements
+                  const modal = document.createElement("div");
+                  const container = document.createElement("div");
+                  const header = document.createElement("div");
+                  const title = document.createElement("strong");
+                  const headerOptions = document.createElement("div");
+                  const closeModalButton = document.createElement("button");
+                  const closeModalIcon = document.createElement("i");
+                  const content = document.createElement("div");
+                  const observationTitle = document.createElement("strong");
+                  const observationDescription = document.createElement("textarea");
+                  
+                  // Set attributes
+                  modal.setAttribute("class", "modal modal--active");
+                  modal.setAttribute("role", "dialog");
+
+                  container.setAttribute("class", "modal__container");
+                  header.setAttribute("class", "modal__header");
+                  title.setAttribute("class", "modal__title");
+                  headerOptions.setAttribute("class", "modal__header-options");
+
+                  closeModalButton.setAttribute("class", "modal__header-button");
+                  closeModalButton.setAttribute("type", "button");
+                  closeModalButton.setAttribute("aria-label", "Close modal");
+                  closeModalButton.setAttribute("title", "Close");
+
+                  closeModalIcon.setAttribute("class", "modal__header-button-icon ti ti-x");
+                  content.setAttribute("class", "modal__content");
+                  observationTitle.setAttribute("class", "modal__form-label");
+
+                  observationDescription.setAttribute("class", "modal__form-textarea");
+                  observationDescription.setAttribute("id", "");
+                  observationDescription.setAttribute("name", "");
+
+                  // Set text content
+                  title.textContent = "Order data";
+                  observationTitle.textContent = "Observations";
+                  observationDescription.value = order.observations ?? "No observation provided.";
+
+                  // Append child nodes
+                  document.body.appendChild(modal);
+                  modal.appendChild(container);
+
+                  container.appendChild(header);
+                  container.appendChild(content);
+
+                  header.appendChild(title);
+                  header.appendChild(headerOptions);
+
+                  headerOptions.appendChild(closeModalButton);
+                  closeModalButton.appendChild(closeModalIcon);
+
+                  content.appendChild(observationTitle);
+                  content.appendChild(observationDescription);
+
+                  // Add event listeners
+                  closeModalButton.addEventListener("click", () => {
+                    modal.remove();
+                  });
                 });
             });
         })

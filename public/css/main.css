@@ -2262,3 +2262,8 @@ path {
     -webkit-box-shadow: var(--circle-checked-shadow);
     box-shadow: var(--circle-checked-shadow);
 }
+
+.order-info-button {
+    color: var(--color-cyan-aqua-400);
+    cursor: pointer;
+}
