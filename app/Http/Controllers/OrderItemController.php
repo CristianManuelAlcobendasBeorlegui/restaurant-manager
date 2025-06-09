@@ -539,6 +539,7 @@ class OrderItemController extends Controller
                     'table' => $order->table_id,
                     'guests' => $order->table->guests ?? null,
                     'status' => $order->status,
+                    'observations' => $order->observations,
                     'updated_at' => $updatedAtFormatted,
                     'items' => $items,
                 ];
