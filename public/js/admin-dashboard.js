@@ -1882,6 +1882,7 @@ function addTableToTable(tableData) {
 
                 tableData.status = "available";
                 tableData.connected_users = [];
+                tableData.code = codeInputField.value;
 
                 qrPreviewImage.innerHTML = "";
                 new QRCode(
