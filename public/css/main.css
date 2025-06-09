@@ -1415,6 +1415,12 @@ path {
     padding: 1rem;
 }
 
+@media (width <= 370px) {
+    .order__items {
+        padding: 1rem 0;
+    }
+}
+
 .order__item {
     position: relative;
     width: 100%;
@@ -1494,6 +1500,10 @@ path {
     width: 10px;
     height: 1px;
     background-color: var(--color-black-400);
+}
+
+.order__item-details {
+    width: 100%;
 }
 
 .order__item-details .order__item-data::before {
