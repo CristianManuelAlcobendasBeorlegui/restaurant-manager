@@ -885,6 +885,13 @@
     }
 }
 
+@media (width <= 420px) {
+  .item-view__data {
+    padding: 2rem 1rem;
+    border-radius: 2rem 2rem 0 0;
+  }
+}
+
 @media (width <= 320px) {
     .item-view__allergens {
         grid-template-columns: repeat(2, 1fr);
@@ -1248,6 +1255,17 @@ path {
 .quantity-control__input[readonly] {
     padding: 0;
     cursor: default;
+}
+
+@media (width <= 370px) {
+  .item-view__actions {
+    flex-direction: column;
+  }
+
+  .item-view .quantity-control {
+    width: max-content;
+    margin: 0 auto;
+  }
 }
 
 /* ===============================================================================
