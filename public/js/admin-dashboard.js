@@ -2113,7 +2113,7 @@ function loadConnectedUsers(tableData) {
 
                     // Set text content
                     username.textContent = user.name;
-                    id.textContent = user.id;
+                    id.textContent = user.code;
                     disconnectUserButton.textContent = "Disconnect";
 
                     // Append child nodes
