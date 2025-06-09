@@ -330,76 +330,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.21.2/dist/sweetalert2.min.css
           </div>
         </div>
         <nav class="menu__navigation">
-          <button
-            class="menu__navigation-button menu__navigation-button--active"
-            data-related-category="frequent-order"
-          >
-            Frequent order
-          </button>
-          <button
-            class="menu__navigation-button"
-            data-related-category="Some category"
-          >
-            Some category
-          </button>
         </nav>
         <div class="menu__results">
           <span class="menu__no-results">No items.</span>
           <div class="menu__items">
-            <div class="menu-item">
-              <div class="menu-item__tag menu-item__tag--supplement">
-                Supplement +2,00€
-              </div>
-              <img
-                src="{{ asset('img/600x400.png') }}"
-                alt="Item image"
-                class="menu-item__image"
-              />
-              <div class="menu-item__data">
-                <div
-                  class="menu-item__data-item menu-item__data-item--highlighted"
-                  data-element="menu-item--name"
-                >
-                  <span class="menu-item__data-value">Some item</span>
-                </div>
-                <div
-                  class="menu-item__data-item menu-item__data-item--subitem"
-                  data-element="menu-item--quantity-type"
-                >
-                  <strong class="menu-item__data-name">Quantity type</strong>
-                  <span class="menu-item__data-value">Complete</span>
-                </div>
-                <div
-                  class="menu-item__data-item menu-item__data-item--subitem"
-                  data-element="menu-item--quantity-type"
-                >
-                  <strong class="menu-item__data-name">Pieces per unit</strong>
-                  <span class="menu-item__data-value">2</span>
-                </div>
-                <div
-                  class="menu-item__data-item"
-                  data-element="menu-item--allergens"
-                >
-                  <strong class="menu-item__data-name">Allergens</strong>
-                  <span class="menu-item__data-value">
-                    <i
-                      class="menu-item__allergen-icon ti ti-egg"
-                      aria-label="Egg"
-                      title="Egg"
-                    ></i>
-                  </span>
-                </div>
-                <div class="menu-item__actions">
-                  <button
-                    class="button button--primary button--default button--rounded button--bigger"
-                    type="button"
-                    aria-label="Add item to current order"
-                  >
-                    <i class="button__icon ti ti-plus"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -417,7 +351,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.21.2/dist/sweetalert2.min.css
             data-element="order-id"
           >
             <strong class="order-to-validate-form__data-name">Order</strong
-            ><span class="order-to-validate-form__data-value">3</span>
+            ><span class="order-to-validate-form__data-value">?</span>
           </div>
         </div>
         <div class="order-to-validate-form__items">
@@ -448,48 +382,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.21.2/dist/sweetalert2.min.css
             </tr>
             <tbody class="table__body">
               <tr class="table__row">
-                <td class="table__cell">1</td>
-                <td class="table__cell">Some item</td>
-                <td class="table__cell">
-                  <div class="quantity-control">
-                    <button
-                      class="quantity-control__button"
-                      type="button"
-                      data-element="quantity-control-decrement-button"
-                      aria-label="Decrement"
-                    >
-                      −</button
-                    ><input
-                      class="quantity-control__input"
-                      type="number"
-                      min="1"
-                      max="99"
-                      value="3"
-                      aria-labelledby="order-3--quantity"
-                      readonly="true"
-                    /><button
-                      class="quantity-control__button"
-                      type="button"
-                      data-element="quantity-control-increment-button"
-                      aria-label="Increment"
-                    >
-                      +
-                    </button>
-                  </div>
-                </td>
-                <td class="table__cell table__cell--supplement">0,00</td>
-                <td class="table__cell" data-edit-mode-only="true">
-                  <div class="table__cell-options">
-                    <button
-                      class="table__button table__button--remove-item"
-                      type="button"
-                      aria-label="Remove item"
-                      title="Remove item"
-                    >
-                      <i class="table__icon ti ti-trash"></i>
-                    </button>
-                  </div>
-                </td>
+                <td class="table__cell">No data</td>
               </tr>
             </tbody>
           </table>
@@ -512,125 +405,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.21.2/dist/sweetalert2.min.css
         <i class="refresh-previous-orders ti ti-refresh"></i>
       </h2>
       <div class="page-section__orders">
-        <div class="order">
-          <div class="order__data">
-            <div
-              class="status status--in-queue status--no-circle status--with-background"
-            >
-              In queue
-            </div>
-            <div class="order__data-item order__data-item--highlighted">
-              <strong class="order__data-name">Order</strong>
-              <span class="order__data-value">0</span>
-            </div>
-            <div class="order__data-item">
-              <strong class="order__data-name">Added at</strong>
-              <span class="order__data-value">10/05/2025 10:00h</span>
-            </div>
-          </div>
-          <ul class="order__items">
-            <li class="order__item" data-item-status="in-queue">
-              <strong class="order__item-name">0 Item name (x1)</strong>
-              <div class="status status--in-queue">In queue</div>
-            </li>
-            <li class="order__item">
-              <details class="order__item-details">
-                <summary class="order__item-data">
-                  <span class="order__item-name">1 Item name (x3)</span>
-                  <div class="order__item-statuses">
-                    <div
-                      class="status status--in-queue"
-                      aria-label="In queue Item name"
-                    >
-                      3
-                    </div>
-                    <div
-                      class="status status--preparing"
-                      aria-label="Preparing Item name"
-                    >
-                      0
-                    </div>
-                    <div
-                      class="status status--completed"
-                      aria-label="Completed Item name"
-                    >
-                      0
-                    </div>
-                  </div>
-                </summary>
-                <ul class="order__items order__items--subitems">
-                  <li
-                    class="order__item order__item--subitem"
-                    data-item-status="in-queue"
-                  >
-                    <strong class="order__item-name">Item name</strong>
-                    <div class="status status--in-queue">In queue</div>
-                  </li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </div>
-
-        <div class="order">
-          <div class="order__data">
-            <div
-              class="status status--in-queue status--no-circle status--with-background"
-            >
-              In queue
-            </div>
-            <div class="order__data-item order__data-item--highlighted">
-              <strong class="order__data-name">Order</strong>
-              <span class="order__data-value">0</span>
-            </div>
-            <div class="order__data-item">
-              <strong class="order__data-name">Added at</strong>
-              <span class="order__data-value">10/05/2025 10:00h</span>
-            </div>
-          </div>
-          <ul class="order__items">
-            <li class="order__item" data-item-status="in-queue">
-              <strong class="order__item-name">0 Item name (x1)</strong>
-              <div class="status status--in-queue">In queue</div>
-            </li>
-            <li class="order__item">
-              <details class="order__item-details">
-                <summary class="order__item-data">
-                  <span class="order__item-name">1 Item name (x3)</span>
-                  <div class="order__item-statuses">
-                    <div
-                      class="status status--in-queue"
-                      aria-label="In queue Item name"
-                    >
-                      3
-                    </div>
-                    <div
-                      class="status status--preparing"
-                      aria-label="Preparing Item name"
-                    >
-                      0
-                    </div>
-                    <div
-                      class="status status--completed"
-                      aria-label="Completed Item name"
-                    >
-                      0
-                    </div>
-                  </div>
-                </summary>
-                <ul class="order__items order__items--subitems">
-                  <li
-                    class="order__item order__item--subitem"
-                    data-item-status="in-queue"
-                  >
-                    <strong class="order__item-name">Item name</strong>
-                    <div class="status status--in-queue">In queue</div>
-                  </li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </div>
       </div>
     </section>
     <div class="item-view" data-item-id="0">
