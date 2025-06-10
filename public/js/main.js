@@ -1065,6 +1065,7 @@ function loadMenu() {
             image.setAttribute("class", "menu-item__image");
             image.setAttribute("src", item.image ?? PLACEHOLDER_IMAGE);
             image.setAttribute("alt", `${item.name} image`);
+            image.setAttribute("loading", "lazy")
 
             data.setAttribute("class", "menu-item__data");
 
